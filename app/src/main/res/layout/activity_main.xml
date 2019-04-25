@@ -15,12 +15,12 @@
             android:src="@drawable/rentalcarsample"/>
 
     <Button android:id="@+id/sendtolist"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Go to Listings"
             android:layout_below="@id/landingpic"
             android:layout_centerInParent="true"
-            android:background="#add8e6"
+            android:background="@drawable/oval_background"
             android:onClick="handleClick"
     />
 

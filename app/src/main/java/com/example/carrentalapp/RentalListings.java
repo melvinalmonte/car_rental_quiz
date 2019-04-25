@@ -10,23 +10,26 @@ import android.widget.*;
 
 public class RentalListings extends AppCompatActivity {
 
+    String[] rentalList = {
+            "Avis",
+            "Budget",
+            "Dollar",
+            "Sixt",
+            "Thrifty"
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rental_listings);
 
-        String[] rentalList = {
-                "Avis",
-                "Budget",
-                "Dollar",
-                "Sixt",
-                "Thrifty"
-        };
-
         ListView listView = findViewById(R.id.rentalList);
-        ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.activity_listview, rentalList);
-        listView.setAdapter(adapter);
+        ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.activity_listview, R.id.textView, rentalList);
 
+
+
+
+        listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
